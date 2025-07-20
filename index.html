@@ -1,54 +1,72 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ZSU PUMP ($ZSUP)</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="lang.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>$ZSUP — Meme Token</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png" />
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="ZSUP Logo" class="logo" />
-        <nav>
-            <ul>
-                <li><a href="#about" data-key="about">About</a></li>
-                <li><a href="#tokenomics" data-key="tokenomics">Tokenomics</a></li>
-                <li><a href="#roadmap" data-key="roadmap">Roadmap</a></li>
-                <li><a href="#faq" data-key="faq">FAQ</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>$ZSUP</h1>
-        <p data-key="slogan">The most patriotic meme coin on Solana!</p>
-        <a href="https://pump.fun" class="pump-btn" target="_blank" data-key="buy">BUY ON PUMP.FUN</a>
-        <section id="about">
-            <h2 data-key="about">About</h2>
-            <p data-key="description">
-                ZSU PUMP (ZSUP) features a soldier on a rocket with a cat in balaclava and a waving flag!
-                For those who hold – respect. For those who sell – glory.
-            </p>
-        </section>
-        <section id="tokenomics">
-            <h2 data-key="tokenomics">Tokenomics</h2>
-            <ul>
-                <li>1,000,000,000 $ZSUP</li>
-                <li>100% community driven</li>
-            </ul>
-        </section>
-        <section id="roadmap">
-            <h2 data-key="roadmap">Roadmap</h2>
-            <p>🚀 Launch<br>🎯 Pump<br>🌕 Glory</p>
-        </section>
-        <section id="faq">
-            <h2 data-key="faq">FAQ</h2>
-            <p><strong>Is $ZSUP a joke?</strong> No. It’s a way of life.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 ZSU PUMP</p>
-    </footer>
+  <header>
+    <img src="logo.png" alt="$ZSUP Logo" class="logo"/>
+    <h1>$ZSUP</h1>
+    <p data-i18n="subtitle">The meme token that supplies the vibe!</p>
+    <a href="https://pump.fun" class="buy-button" target="_blank">BUY ON PUMP.FUN</a>
+  </header>
+  <section>
+    <h2 data-i18n="about_title">About $ZSUP</h2>
+    <p data-i18n="about_text">Born from memes and camo. $ZSUP is a community-powered token with mission and madness.</p>
+  </section>
+  <section>
+    <h2 data-i18n="roadmap_title">Roadmap</h2>
+    <ul>
+      <li data-i18n="roadmap_1">Launch on pump.fun</li>
+      <li data-i18n="roadmap_2">Deploy meme army</li>
+      <li data-i18n="roadmap_3">Camo-themed NFT drops</li>
+    </ul>
+  </section>
+  <footer>
+    <p>&copy; 2025 $ZSUP</p>
+  </footer>
+  <script>
+    const lang = navigator.language || navigator.userLanguage;
+    const i18n = {
+      'subtitle': {
+        'uk': 'Мемний токен, який постачає вайб!',
+        'en': 'The meme token that supplies the vibe!'
+      },
+      'about_title': {
+        'uk': 'Про $ZSUP',
+        'en': 'About $ZSUP'
+      },
+      'about_text': {
+        'uk': 'Народжений з мемів і камуфляжу. $ZSUP — це токен спільноти з місією і шаленством.',
+        'en': 'Born from memes and camo. $ZSUP is a community-powered token with mission and madness.'
+      },
+      'roadmap_title': {
+        'uk': 'Роадмапа',
+        'en': 'Roadmap'
+      },
+      'roadmap_1': {
+        'uk': 'Запуск на pump.fun',
+        'en': 'Launch on pump.fun'
+      },
+      'roadmap_2': {
+        'uk': 'Розгортання мемної армії',
+        'en': 'Deploy meme army'
+      },
+      'roadmap_3': {
+        'uk': 'NFT-дропи в стилі камуфляжу',
+        'en': 'Camo-themed NFT drops'
+      }
+    };
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const t = lang.startsWith('uk') ? 'uk' : 'en';
+      el.textContent = i18n[key][t];
+    });
+  </script>
 </body>
 </html>
