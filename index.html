@@ -1,52 +1,54 @@
+
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ZSU PUMP ($ZSUP)</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZSU PUMP ($ZSUP)</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="lang.js" defer></script>
 </head>
 <body>
-  <nav>
-    <button onclick="switchLang('uk')">UA</button>
-    <button onclick="switchLang('en')">EN</button>
-  </nav>
-  <header>
-    <h1>$ZSUP — ZSU PUMP</h1>
-    <p id="slogan">Токен, що пампить дух і ринок 🇺🇦🚀</p>
-  </header>
-
-  <section>
-    <h2 id="about-title">Про токен</h2>
-    <p id="about-text">
-      $ZSUP — це мем-токен, натхненний Збройними Силами України та духом перемоги. Ми не обіцяємо прибутків — ми пампимо по фану. Ліквідність заблокована, смартконтракт чесний, а спільнота — залізна!
-    </p>
-    <a class="buy-button" href="https://pump.fun" target="_blank">Купити на pump.fun</a>
-  </section>
-
-  <section>
-    <h2 id="faq-title">FAQ</h2>
-    <p id="faq-text">
-      <strong>Що таке $ZSUP?</strong><br>
-      Це не просто токен — це хвиля пампу. Купуєш — пампиш. Тримаєш — герой. Продаєш — як знаєш... 😉
-    </p>
-  </section>
-
-  <section>
-    <h2 id="community-title">Спільнота</h2>
-    <p id="community-text">
-      Приєднуйся до наших соцмереж, ділись мемами, запускай челенджі! Разом ми пампнемо до місяця!
-    </p>
-    <ul>
-      <li><a href="#">Telegram</a></li>
-      <li><a href="#">Twitter</a></li>
-    </ul>
-  </section>
-
-  <footer>
-    © 2025 ZSU PUMP — Слава Україні! 💙💛
-  </footer>
-
-  <script src="script.js"></script>
+    <header>
+        <img src="logo.png" alt="ZSUP Logo" class="logo" />
+        <nav>
+            <ul>
+                <li><a href="#about" data-key="about">About</a></li>
+                <li><a href="#tokenomics" data-key="tokenomics">Tokenomics</a></li>
+                <li><a href="#roadmap" data-key="roadmap">Roadmap</a></li>
+                <li><a href="#faq" data-key="faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>$ZSUP</h1>
+        <p data-key="slogan">The most patriotic meme coin on Solana!</p>
+        <a href="https://pump.fun" class="pump-btn" target="_blank" data-key="buy">BUY ON PUMP.FUN</a>
+        <section id="about">
+            <h2 data-key="about">About</h2>
+            <p data-key="description">
+                ZSU PUMP (ZSUP) features a soldier on a rocket with a cat in balaclava and a waving flag!
+                For those who hold – respect. For those who sell – glory.
+            </p>
+        </section>
+        <section id="tokenomics">
+            <h2 data-key="tokenomics">Tokenomics</h2>
+            <ul>
+                <li>1,000,000,000 $ZSUP</li>
+                <li>100% community driven</li>
+            </ul>
+        </section>
+        <section id="roadmap">
+            <h2 data-key="roadmap">Roadmap</h2>
+            <p>🚀 Launch<br>🎯 Pump<br>🌕 Glory</p>
+        </section>
+        <section id="faq">
+            <h2 data-key="faq">FAQ</h2>
+            <p><strong>Is $ZSUP a joke?</strong> No. It’s a way of life.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 ZSU PUMP</p>
+    </footer>
 </body>
 </html>
