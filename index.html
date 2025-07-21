@@ -1,72 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>$ZSUP — Meme Token</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$ZSUP Token</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="lang.js" defer></script>
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="$ZSUP Logo" class="logo"/>
-    <h1>$ZSUP</h1>
-    <p data-i18n="subtitle">The meme token that supplies the vibe!</p>
-    <a href="https://pump.fun" class="buy-button" target="_blank">BUY ON PUMP.FUN</a>
-  </header>
-  <section>
-    <h2 data-i18n="about_title">About $ZSUP</h2>
-    <p data-i18n="about_text">Born from memes and camo. $ZSUP is a community-powered token with mission and madness.</p>
-  </section>
-  <section>
-    <h2 data-i18n="roadmap_title">Roadmap</h2>
-    <ul>
-      <li data-i18n="roadmap_1">Launch on pump.fun</li>
-      <li data-i18n="roadmap_2">Deploy meme army</li>
-      <li data-i18n="roadmap_3">Camo-themed NFT drops</li>
-    </ul>
-  </section>
-  <footer>
-    <p>&copy; 2025 $ZSUP</p>
-  </footer>
-  <script>
-    const lang = navigator.language || navigator.userLanguage;
-    const i18n = {
-      'subtitle': {
-        'uk': 'Мемний токен, який постачає вайб!',
-        'en': 'The meme token that supplies the vibe!'
-      },
-      'about_title': {
-        'uk': 'Про $ZSUP',
-        'en': 'About $ZSUP'
-      },
-      'about_text': {
-        'uk': 'Народжений з мемів і камуфляжу. $ZSUP — це токен спільноти з місією і шаленством.',
-        'en': 'Born from memes and camo. $ZSUP is a community-powered token with mission and madness.'
-      },
-      'roadmap_title': {
-        'uk': 'Роадмапа',
-        'en': 'Roadmap'
-      },
-      'roadmap_1': {
-        'uk': 'Запуск на pump.fun',
-        'en': 'Launch on pump.fun'
-      },
-      'roadmap_2': {
-        'uk': 'Розгортання мемної армії',
-        'en': 'Deploy meme army'
-      },
-      'roadmap_3': {
-        'uk': 'NFT-дропи в стилі камуфляжу',
-        'en': 'Camo-themed NFT drops'
-      }
-    };
-
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      const t = lang.startsWith('uk') ? 'uk' : 'en';
-      el.textContent = i18n[key][t];
-    });
-  </script>
+    <header>
+        <img src="logo.png" alt="$ZSUP Logo" class="logo">
+        <nav>
+            <button class="lang-btn" onclick="switchLang()">🇺🇦 / 🇬🇧</button>
+        </nav>
+    </header>
+    <main>
+        <h1 data-lang="title">$ZSUP — МЕМ-Токен Захисників України</h1>
+        <p data-lang="desc">Народжений із духу опору. Підтримай ініціативу та стань частиною нашої крипто-армії.</p>
+        <a href="https://pump.fun" target="_blank" class="buy-btn" data-lang="buy">Купити на Pump.fun</a>
+    </main>
+    <footer>
+        <p>&copy; 2025 $ZSUP. Все буде Україна!</p>
+    </footer>
 </body>
 </html>

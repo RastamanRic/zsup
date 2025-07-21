@@ -1,23 +1,33 @@
 
 const translations = {
-    ua: {
-        about: "Про нас",
-        tokenomics: "Токеноміка",
-        roadmap: "Дорожня карта",
-        faq: "Питання",
-        slogan: "Найпатріотичніший мем-токен на Solana!",
-        buy: "КУПИТИ НА PUMP.FUN",
-        description: "ZSU PUMP (ZSUP) — це солдат на ракеті з котом у балаклаві та прапором! Хто тримає — повага. Хто продає — слава."
+    'en': {
+        title: '$ZSUP — Meme Token of Ukraine’s Defenders',
+        desc: 'Born from the spirit of resistance. Support the initiative and become part of our crypto-army.',
+        buy: 'Buy on Pump.fun'
+    },
+    'uk': {
+        title: '$ZSUP — МЕМ-Токен Захисників України',
+        desc: 'Народжений із духу опору. Підтримай ініціативу та стань частиною нашої крипто-армії.',
+        buy: 'Купити на Pump.fun'
     }
 };
-document.addEventListener("DOMContentLoaded", () => {
-    const userLang = navigator.language || navigator.userLanguage;
-    if (userLang.startsWith("uk")) {
-        document.querySelectorAll("[data-key]").forEach(el => {
-            const key = el.getAttribute("data-key");
-            if (translations.ua[key]) {
-                el.textContent = translations.ua[key];
-            }
-        });
-    }
-});
+
+function switchLang() {
+    const currentLang = document.documentElement.lang === 'uk' ? 'en' : 'uk';
+    setLang(currentLang);
+}
+
+function setLang(lang) {
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-lang]').forEach(el => {
+        const key = el.getAttribute('data-lang');
+        if (translations[lang][key]) {
+            el.textContent = translations[lang][key];
+        }
+    });
+}
+
+window.onload = () => {
+    const userLang = navigator.language.startsWith('uk') ? 'uk' : 'en';
+    setLang(userLang);
+};
